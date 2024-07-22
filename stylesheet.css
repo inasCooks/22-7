@@ -1,0 +1,85 @@
+body{
+    background-color: #030303;
+    position: relative
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Content background color */
+}
+.spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black overlay with transparency */
+    border-radius: 50%; /* Circular spotlight shape */
+    mix-blend-mode: exclusion; /* Makes content visible only within the circle */
+}
+
+.container{
+    /* background-color: beige; */
+    height: 100% !important;
+    font-family: 'Pixelify Sans';
+}
+
+.image-wrapper{
+    position: relative; /* Make the container the reference point */
+}
+
+
+.handjet-font {
+    font-family: "Handjet", sans-serif;
+    /* font-optical-sizing: ; */
+    font-weight: 342;
+    font-style: normal;
+    font-variation-settings:"ELGR" 1,"ELSH" 2;
+}
+.pixelify-sans-font {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+#cake, #candle{
+position: absolute; 
+top: 0%; 
+left: 17.6%; 
+transform: translateY(-100%); /* Center image within its height */
+/* transform: trasnlateX(50%); */
+}
+
+#light {
+    position: absolute; /* Absolute positioning relative to the container */
+    top: 0%; 
+    left: 16%; 
+    transform: translateY(-130%); 
+    opacity:0.3;
+    /* transform: trasnlateX(-100%); */
+}
+
+
+#fire {
+    position: absolute; 
+    top: 0%; 
+    bottom: -350%;
+    left: 43.35%; 
+    transform: translateY(-345%); /* Center image within its height */
+    opacity: 100;
+}
+
+#fire-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Match the width of the fire image */
+    height: 100%; /* Match the height of the fire image */
+    z-index: 1; /* Set a higher z-index to capture clicks over the image */
+    cursor: pointer;
+}
+

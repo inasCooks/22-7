@@ -1,0 +1,25 @@
+body{
+    background-color: #000000 !important;
+    position: relative
+}
+.content {
+    min-height: 100vh;
+    min-width: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-emphasis-color: white;
+    /* background-color: #ffffff; */
+}
+.spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--x) var(--y), transparent 10%, rgba(0,0,0,0.95) 20%);
+    /* border-radius: 50%;  */
+    /* mix-blend-mode: exclusion; */
+}
