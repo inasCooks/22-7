@@ -220,37 +220,37 @@ function showManga(){
     document.querySelector('body').style.backgroundColor= "#ffffff";
     console.log(`scroll height: ${document.documentElement.scrollHeight}`)
     container.classList.toggle('manga-mode');
-    // spotlight.style.cssText = `
-    //   min-height: 3284px !important;
-    //   position: absolute;
-    //   inset: 0;
-    //   background-color: green;
-    //   pointer-events: none;
-    //   z-index: 99;
-    //   radial-gradient(
-    //       circle 250px at ${gradientCenterX}% ${gradientCenterY}%, 
-    //       transparent 10%, 
-    //       rgba(0,0,0,0.98)
-    //   )
-    // `;
-
     spotlight.style.cssText = `
-    width: 200px;  /* Adjust width as desired */
-    height: 300px;  /* Adjust height as desired */
-    position: absolute;
-    top: 50%;  /* Position at center vertically */
-    left: 50%;  /* Position at center horizontally */
-    transform: translate(-50%, -50%); /* Center the rectangle */
-    background-color: green;
-    pointer-events: none;
-    z-index: 99;
-    /* Update gradient for rectangular spotlight (optional) */
-    radial-gradient(
-      ellipse closest-side at ${gradientCenterX}% ${gradientCenterY}%,
-      transparent 10%,
-      rgba(0,0,0,0.98)
-    );
-  `;
+      min-height: 3284px !important;
+      position: absolute;
+      inset: 0;
+      background-color: green;
+      pointer-events: none;
+      z-index: 99;
+      radial-gradient(
+          circle 250px at ${gradientCenterX}% ${gradientCenterY}%, 
+          transparent 10%, 
+          rgba(0,0,0,0.98)
+      )
+    `;
+
+  //   spotlight.style.cssText = `
+  //   width: 200px;  /* Adjust width as desired */
+  //   height: 300px;  /* Adjust height as desired */
+  //   position: absolute;
+  //   top: 50%;  /* Position at center vertically */
+  //   left: 50%;  /* Position at center horizontally */
+  //   transform: translate(-50%, -50%); /* Center the rectangle */
+  //   background-color: green;
+  //   pointer-events: none;
+  //   z-index: 99;
+  //   /* Update gradient for rectangular spotlight (optional) */
+  //   radial-gradient(
+  //     ellipse closest-side at ${gradientCenterX}% ${gradientCenterY}%,
+  //     transparent 10%,
+  //     rgba(0,0,0,0.98)
+  //   );
+  // `;
     this.manga=manga;
     spotlight.scrollTo({ top: 0, behavior: 'instant' });
   }
