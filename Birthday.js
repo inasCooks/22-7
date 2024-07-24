@@ -211,6 +211,7 @@ function showCard(){
 
 function showManga(){
   if(manga ==null){ 
+    spotlight.style.visibility = 'hidden';
     manga = container.innerHTML+=`
     <div class="mangga-wrapper mt-2 d-flex align-items-center justify-content-center flex-wrap" >
       <img class="mangga" id="manga" src="img/manga/1.png" alt="manga page 1" >
@@ -219,9 +220,13 @@ function showManga(){
     </div>`;
     document.querySelector('body').style.backgroundColor= "#ffffff";
     console.log(`scroll height: ${document.documentElement.scrollHeight}`)
+    console.log(`mangga heigt ${document.querySelector('.mangga-wrapper').maxHeight}`)
     container.classList.toggle('manga-mode');
+    container.style.cssText=`
+      min-hieght: 4200px !important;
+    `
     spotlight.style.cssText = `
-      min-height: 3284px !important;
+      min-height: 4200px !important;
       position: absolute;
       inset: 0;
       background-color: green;
@@ -233,7 +238,8 @@ function showManga(){
           rgba(0,0,0,0.98)
       )
     `;
-
+    
+    
   //   spotlight.style.cssText = `
   //   width: 200px;  /* Adjust width as desired */
   //   height: 300px;  /* Adjust height as desired */
@@ -310,6 +316,10 @@ function incOpacity(object, rate) {
 }
 
 spotlight.style.minHeight= '100vh';
-loadFrames(); // Call loadFrames even if animation is not used (optional)
-animateFire();
-// showCard();
+
+window.onload=function() {
+  loadFrames(); // Call loadFrames even if animation is not used (optional)
+  animateFire();
+}
+window.onload;
+
