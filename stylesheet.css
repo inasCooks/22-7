@@ -1,36 +1,7 @@
 body{
-    background-color: #030303;
+    background-color: #0c0c0c;
     position: relative
 }
-.content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff; /* Content background color */
-}
-.spotlight {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Black overlay with transparency */
-    border-radius: 50%; /* Circular spotlight shape */
-    mix-blend-mode: exclusion; /* Makes content visible only within the circle */
-}
-
-.container{
-    /* background-color: beige; */
-    height: 100% !important;
-    font-family: 'Pixelify Sans';
-}
-
-.image-wrapper{
-    position: relative; /* Make the container the reference point */
-}
-
 
 .handjet-font {
     font-family: "Handjet", sans-serif;
@@ -44,42 +15,101 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+.container{
+    /* background-color: beige; */
+    height: 100vh ;
+    max-width: 100vw !important;
+    font-family: 'Pixelify Sans';   
+}
+.container.manga-mode {
+    min-height: 3284px !important; /* Override for manga */
   }
+
+.image-wrapper{
+    position: relative; 
+    /* height: 100vh; */
+    /* max-width: 600px; */
+    /* visibility: hidden; */
+}
+
+.mangga-wrapper{
+    position: relative; 
+    height: auto;
+    max-width: 600px;
+    min-height: fit-content;
+    /* visibility: hidden; */
+}
+
+img{
+    /* size: 50%; */
+    /* height: 50vh; */
+    object-fit:contain;
+}
+
+.mangga{
+    height: 150vh;
+    object-fit:cover;
+}
+
+
+.card{
+    background-color: #2b231f;
+    max-height: 100vh;
+}
+
+.cake-wrapper{
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
+    max-width: 600px;
+    max-height: fit-content;
+    margin-top: 10px;
+}
+
+
 
 #cake, #candle{
 position: absolute; 
 top: 0%; 
-left: 17.6%; 
-transform: translateY(-100%); /* Center image within its height */
-/* transform: trasnlateX(50%); */
+left: 19.7%; 
+transform: translateY(-90%); 
+transform: trasnlateX(50%);
 }
 
 #light {
-    position: absolute; /* Absolute positioning relative to the container */
+    position: absolute; 
     top: 0%; 
-    left: 16%; 
-    transform: translateY(-130%); 
+    left: 19%; 
+    transform: translateY(-120%); 
     opacity:0.3;
-    /* transform: trasnlateX(-100%); */
+    transform: trasnlateX(-100%);
 }
-
-
 #fire {
     position: absolute; 
     top: 0%; 
-    bottom: -350%;
+    /* bottom: -350%; */
     left: 43.35%; 
-    transform: translateY(-345%); /* Center image within its height */
+    transform: translateY(-315%); 
     opacity: 100;
 }
 
-#fire-overlay{
+.spotlight{
+    min-height: 2190px;
+    visibility: hidden;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Match the width of the fire image */
-    height: 100%; /* Match the height of the fire image */
-    z-index: 1; /* Set a higher z-index to capture clicks over the image */
-    cursor: pointer;
+    inset: 0;
+    background-color: black; //set it to black, dont wanna turn on the spotlight yet
+    pointer-events: none;
+    z-index: 99;  
+    /* background: radial-gradient(
+        circle 280px at 50% 50%, transparent 10%, rgba(0,0,0,0.98)
+    ) */
+}
+
+.row{
+    justify-self: center;
 }
 
